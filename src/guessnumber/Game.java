@@ -12,6 +12,7 @@ import java.util.Random;
  *
  * @author furrki
  */
+
 public class Game {
     private int pickedNumber;
     public int tryCount;
@@ -30,7 +31,7 @@ public class Game {
         } else if (number < pickedNumber) {
             return "Çık";
         } else {
-            return "AFERİİİİİN";
+            return "AFERİİİİİN, "+tryCount+" deneme sonucunda bulundu.";
         }
     }
 }

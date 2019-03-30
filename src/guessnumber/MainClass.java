@@ -35,6 +35,7 @@ public class MainClass extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         numberTextField = new javax.swing.JTextField();
         pickedButton = new javax.swing.JButton();
+        outputLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,6 +49,8 @@ public class MainClass extends javax.swing.JFrame {
             }
         });
 
+        outputLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -55,13 +58,15 @@ public class MainClass extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(pickedButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(numberTextField))))
+                            .addComponent(numberTextField)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -73,7 +78,9 @@ public class MainClass extends javax.swing.JFrame {
                 .addComponent(numberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pickedButton)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         pack();
@@ -82,7 +89,9 @@ public class MainClass extends javax.swing.JFrame {
     private void pickedButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pickedButtonMouseClicked
         int userNumber = Integer.parseInt(numberTextField.getText());
         
-        System.out.println(mainGame.hit(userNumber));
+        String hitOutput = mainGame.hit(userNumber);
+        outputLabel.setText(hitOutput);
+        
     }//GEN-LAST:event_pickedButtonMouseClicked
 
     /**
@@ -123,6 +132,7 @@ public class MainClass extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField numberTextField;
+    private javax.swing.JLabel outputLabel;
     private javax.swing.JButton pickedButton;
     // End of variables declaration//GEN-END:variables
 }
