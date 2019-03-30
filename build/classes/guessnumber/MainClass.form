@@ -71,7 +71,7 @@
         <Property name="text" type="java.lang.String" value="Tuttum"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pickedButtonActionPerformed"/>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pickedButtonMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>

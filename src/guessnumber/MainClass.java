@@ -37,9 +37,9 @@ public class MainClass extends javax.swing.JFrame {
         jLabel1.setText("1 ile 100 arasında bir sayı tut!");
 
         pickedButton.setText("Tuttum");
-        pickedButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pickedButtonActionPerformed(evt);
+        pickedButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pickedButtonMouseClicked(evt);
             }
         });
 
@@ -74,9 +74,10 @@ public class MainClass extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pickedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pickedButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pickedButtonActionPerformed
+    private void pickedButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pickedButtonMouseClicked
+        int numberPicked = Integer.parseInt(numberTextField.getText());
+        System.out.println(numberPicked);
+    }//GEN-LAST:event_pickedButtonMouseClicked
 
     /**
      * @param args the command line arguments
