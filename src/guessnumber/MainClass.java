@@ -14,8 +14,13 @@ public class MainClass extends javax.swing.JFrame {
     /**
      * Creates new form MainClass
      */
+    
+    private Game mainGame;
+    
     public MainClass() {
         initComponents();
+    
+        mainGame = new Game();        
     }
 
     /**
@@ -75,8 +80,9 @@ public class MainClass extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pickedButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pickedButtonMouseClicked
-        int numberPicked = Integer.parseInt(numberTextField.getText());
-        System.out.println(numberPicked);
+        int userNumber = Integer.parseInt(numberTextField.getText());
+        
+        System.out.println(mainGame.hit(userNumber));
     }//GEN-LAST:event_pickedButtonMouseClicked
 
     /**

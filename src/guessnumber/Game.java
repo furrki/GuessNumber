@@ -13,7 +13,7 @@ import java.util.Random;
  * @author furrki
  */
 public class Game {
-    public int pickedNumber;
+    private int pickedNumber;
     public int tryCount;
     
     public Game() {
@@ -21,5 +21,16 @@ public class Game {
 
         Random rand = new Random();
         pickedNumber = rand.nextInt(100);
+    }
+    
+    public String hit(int number) {
+        tryCount += 1;
+        if (number > pickedNumber) {
+            return "İn";
+        } else if (number < pickedNumber) {
+            return "Çık";
+        } else {
+            return "AFERİİİİİN";
+        }
     }
 }
