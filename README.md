@@ -11,6 +11,7 @@ git clone https://github.com/furrki/GuessNumber
 <img src="screenshots/ss1.PNG?raw=true" width="300"> 
 <img src="screenshots/ss2.PNG?raw=true" width="300"> 
 <img src="screenshots/ss3.PNG?raw=true" width="300">  
+<img src="screenshots/ss4.PNG?raw=true" width="300">  
 
 # Author
 furrki -- furkankaynary@gmail.com
