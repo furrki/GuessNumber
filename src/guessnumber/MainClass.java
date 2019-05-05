@@ -91,7 +91,7 @@ public class MainClass extends javax.swing.JFrame {
         
         String hitOutput = mainGame.hit(userNumber);
         outputLabel.setText(hitOutput);
-        
+    
     }//GEN-LAST:event_pickedButtonMouseClicked
 
     /**
